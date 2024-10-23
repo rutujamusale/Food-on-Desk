@@ -1,0 +1,275 @@
+.home .menuItem-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px, 1fr));
+    padding: 20px;
+    background-color: var(--sidebar-color);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color-light);
+    box-shadow: 0px 10px 15px -10;
+}
+
+.home .menuItem-container .title-text{
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.home .menuItem-container .srab-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.home .menuItem-container .search-container{
+    padding: 10px;
+    max-width: 60rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .menuItem-container .search-container input{
+    width: 25rem;
+    height: 2.5rem;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size:  14px;
+    font-weight: 500;
+    color: var(--text-color);
+    border: 1px solid var(--toggle-color);
+    background: var(--primary-color-light);
+}
+
+.home .menuItem-container .button{
+    background: var(--btn-background);
+    width: 5rem;
+    height: 2.4rem;
+    font-size: large;
+    /* position: relative; */
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: var(--btn-text-color);
+    box-shadow: 0px 10px 15px -20px;
+    transition: var(--tran-04);
+}
+
+.home .menuItem-container .button:hover{
+    transition:  var(--tran-02);
+    transform: scale(1.05);
+}
+
+
+.home .menuItem-container .search-container .btn-search{
+    position: relative;
+    right: 18%;
+
+}
+
+.home .menuItem-container .srab-container .add-btn{
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.home .menuItem-container .srab-container .add-btn .butn-add{
+    min-width: 150px;
+}
+
+.home .menuItem-container #newItem{
+    display: none;
+}
+
+.home .menuItem-container #newItem form,
+.home .edit-itemForm{
+    width: 700px;
+    height: min-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 20px;
+    background: var(--sidebar-color);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color-light);
+    box-shadow: 0px 10px 15px -5px;
+    position: relative;
+    left: 300px;
+    gap: 10px;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.home .menuItem-container #newItem .text-title,
+.home .edit-itemForm .text-title{
+    grid-column: span 2;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.home .menuItem-container #newItem .input-field,
+.home .edit-itemForm .input-field{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.home .menuItem-container #newItem .input-field label,
+.home .edit-itemForm .input-field label{
+    display: flex;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--title-color);
+}
+
+.home .menuItem-container #newItem .input-field input,
+.home .edit-itemForm .input-field input{
+    outline: none;
+    position: relative;
+    height: 40px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border: none;
+    font-size: 16px;
+    background: var(--body);
+    color: var(--text-color);
+    border-bottom: 1px solid;
+}
+
+.home  .menuItem-container #newItem .input-field input,
+.home .edit-itemForm .input-field input, select{
+    outline: none;
+    position: relative;
+    left: 10px;
+    width: 15rem;
+    height: 40px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border: none;
+    font-size: 16px;
+    background: var(--body);
+    color: var(--text-color);
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+.home  .menuItem-container #newItem .input-field  select option,
+.home .edit-itemForm .input-field select option{
+    color: black;
+}
+
+.home .menuItem-container #newItem .input-field .selectImg,
+.home .edit-itemForm .input-field .selectImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--primary-color-light);
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    background-color: #accbff;
+}
+
+.home .menuItem-container #newItem .input-field img,
+.home .edit-itemForm .input-field img{
+    width: 180px;
+    height: 180px;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.home .menuItem-container #newItem .buttons,
+.home .edit-itemForm .buttons{
+    grid-column: 2;
+    display: flex;
+    justify-content: end;
+    align-items: self-end;
+}
+
+.home .menuItem-container #newItem #mssgAlert{
+    display: none;
+}
+
+.home .menuItem-container #newItem #mssgAlert{
+    color: red;
+    grid-column: 2;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    left: 10px;
+    font-weight: 500;
+    height: min-content;
+}
+
+.home .menuItem-container #newItem .cancel-btn,
+.home .edit-itemForm .cancel-btn{
+    background: var(--danger);
+}
+
+.home .menuItem-container #newItem #imageAlert{
+    display: none;
+}
+.home .menuItem-container #newItem #imageAlert{
+    height: min-content;
+    font-weight:  500;
+    color: red;
+}
+
+/* Table */
+.home table{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.home table th, td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid var(--primary-color-light);
+}
+
+.home table thead{
+    color: var(--title-color);
+}
+
+.home table tbody tr td{
+    color: var(--text-color);
+    font-size: large;
+    font-weight: 500;
+}
+
+.home table tbody tr:hover{
+    background-color: rgba(75, 96, 148, 0.1);
+    transition: var(--tran-03);
+}
+
+.home table tbody .bttn{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--body);
+    font-size: large;
+    font-weight: 500;
+}
+
+.home table tbody #edit-btn{
+    color: var(--progress);
+}
+
+.home table tbody #delete-btn{
+    color: var(--danger);
+}
+

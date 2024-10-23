@@ -1,0 +1,73 @@
+
+/* ============ Chart ================ */
+.home .chart-container{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    row-gap: 50px;
+    gap: 20px;
+    /* column-gap: 30px; */
+    padding: 20px 10px;
+    grid-template-columns: 1fr 1fr;
+    /* border-radius: 5px; */
+    /* background-color: red; */
+}
+
+
+.home .chart-container .checkByDate{
+    grid-column-start: 1 ;
+    grid-column-end: 3;
+    /* padding-left: 5px; */
+    /* background-color: bisque; */
+    
+}
+
+.home .chart-container .checkByDate label{
+    color: var(--title-color);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0px 10px;
+}
+
+.home .chart-container .checkByDate input{
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 36px;
+    text-align: center;
+    /* background: var(--text-color); */
+}
+
+.home .chart-container .btnn{
+    height: 36px;
+    padding: 0px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    color: var(--btn-text-color);
+    background: var(--btn-background);
+    cursor: pointer;
+    transition: all .3s ease;
+    font-weight:500 ;
+}
+
+.home .chart-container .btnn:hover{
+    transition: var(--tran-02);
+    transform: scale(1.03);
+}
+
+.home  .chart-container .chart-1,
+.home .chart-container .chart-2{
+    width: 100%;
+    border-radius: 10px;
+    background: var(--sidebar-color);
+    min-width: 0px;
+}
+
+.home  .chart-container .chart-1:hover,
+.home .chart-container .chart-2:hover{
+    transition: var(--tran-03);
+    transform: scale(1.05);
+    z-index: 1;
+    box-shadow: rgba(70, 70, 70,  0.4) 0px 15px 30px -10px;
+}

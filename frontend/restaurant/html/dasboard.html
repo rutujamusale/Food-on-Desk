@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============ CSS Style ============ -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- ============ BoxIcons CSS ============ -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Manager Dashboard</title>
+</head>
+<body>
+    <!-- ========== Sidebar Start Here ========== -->
+    <section class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../images/logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">RJ</span>
+                    <span class="restr">Restaurant</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Search...." id="search">
+                </li>
+
+                <ul class="menu-link">
+                    <li class="nav-link active">
+                        <a href="../html/dasboard.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/menu.html">
+                            <i class='bx bx-food-menu icon'></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/orders.html">
+                            <i class='bx bx-bowl-hot icon'></i>
+                            <span class="text nav-text">Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/users.html">
+                            <i class='bx bx-user icon'></i>
+                            <span class="text nav-text">Users</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/analysis.html">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Analysis</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/promo.html">
+                            <i class='bx bx-code-alt icon'></i>
+                            <span class="text nav-text">Promocode</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="nav-link">
+                    <a href="#" id="logoutButton">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode" id="darkMode">
+                    <div class="moon-sun">
+                        <i class="bx bx-moon icon moon"></i>
+                        <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+
+                    <div class="toggle-switch" id="darkMode">
+                        <span class="switch"></span>
+                    </div>
+
+                </li>
+            </div>
+        </div>
+    </section>
+    <!-- ============ Sidebar Ends Here ============ -->
+
+    <!-- ============ Navbar  ============ -->
+    <section class="navbar">
+        <div class="text-profile">
+            <div class="heading">Dashboard</div>
+
+            <div class="text profile-img">
+                <div class="user-info">
+                    <span class="name">Hii, Jayesh Savle</span>
+                    <span class="role">Admin</span>
+                </div>
+
+                <span class="image">
+                    <img src="../images/profile1.png" alt="profile picture">
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- ============== Navbar End ============== -->
+
+    <!-- ========= Home Section ============= -->
+    <section class="home">
+        <div class="text-head">
+            <h2>Welcome to your Dashboard!</h2>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="box-container">
+                    <div class="box" id="box1">
+                        <span class="status">Monthly Total Revenue</span>
+                        <span class="status-num" id="revenue"><i class='bx bx-rupee icon'></i>30000</span>
+                    </div>
+                    <div class="box" id="box2">
+                        <span class="status">Monthly Total Orders</span>
+                        <span class="status-num" id="total_ord">250</span>
+                    </div>
+                    <div class="box" id="box3">
+                        <span class="status">Todays Orders</span>
+                        <span class="status-num" id="today_ord">3</span>
+                    </div>
+                    <div class="box" id="box5">
+                        <span class="status">Active Orders</span>
+                        <span class="status-num" id="active_ord">3</span>
+                    </div>
+                    <div class="box" id="box4">
+                        <span class="status">Pending Orders</span>
+                        <span class="status-num" id="pend_ord">3</span>
+                    </div>
+                    <div class="box" id="box6">
+                        <span class="status">Canceled Orders</span>
+                        <span class="status-num" id="cancl_ord">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-oders">
+            <div class="text">Recent Orders</div>
+            <table>
+                <thead class="table-order">
+                    <th>Order No.</th>
+                    <th>Table No.</th/th>
+                    <th>Mobile No.</th/th>
+                    <th>Payment</th/th>
+                    <th>Status</th/th>
+                    <th>View Order</th/th>
+                    <th colspan="2">Action</th/th>
+                </thead>
+
+                <tbody>
+                    <tr><td id="no-order" colspan='8' align='center'>No orders yet!</td></tr>
+                    <tr>
+                        <td>#8753</td>
+                        <td>TBL-006</td>
+                        <td>9825411354</a>
+                        <td id="payment">Not Paid</td>
+                        <td id="status_pending">Pending</td>
+                        <td><a id="view-order" href="#viewModal" data-toggle="modal" onclick="showDetails(this)">View Details</a></td>
+                        <td><a id="accept" href="#">Accept</a></td>
+                        <td><a id="decline" href="#">Decline</a></td>
+                    </tr>
+                    <tr>
+                        <td>#8568</td>
+                        <td>TBL-003</td>
+                        <td>7825411354</a>
+                        <td id="payment">Not Paid</td>
+                        <td  id="status_pending">Pending</td>
+                        <td><a id="view-order" href="#viewModal" data-toggle="modal" onclick="showDetails(this)">View Details</a></td>
+                        <td><a id="accept" href="#">Accept</a></td>
+                        <td><a id="decline" href="#">Decline</a></td>
+                    </tr>
+                    <tr>
+                        <td>#8759</td>
+                        <td>TBL-015</td>
+                        <td>845526546</a>
+                        <td id="payment">Not Paid</td>
+                        <td id="status_process">Active</td>
+                        <td><a id="view-order" href="#viewModal" data-toggle="modal" onclick="showDetails(this)">View Details</a></td>
+                        <td><a id="accept" href="#">Accept</a></td>
+                        <td><a id="decline" href="#">Decline</a></td>
+                    </tr>
+                    <tr>
+                        <td>#8763</td>
+                        <td>TBL-009</td>
+                        <td>9825411354</a>
+                        <td id="payment_paid">Paid</td>
+                        <td id="status_completed">Done</td>
+                        <td><a id="view-order" href="#viewModal" data-toggle="modal" onclick="showDetails(this)">View Details</a></td>
+                        <td><a id="accept" href="#">Accept</a></td>
+                        <td><a id="decline" href="#">Decline</a></td>
+                    </tr>
+                    <tr>
+                        <td>#8755</td>
+                        <td>TBL-001</td>
+                        <td>7825411354</a>
+                        <td id="payment">Refunded</td>
+                        <td id="status_decline">Cancle</td>
+                        <td><a id="view-order" href="#viewModal" data-toggle="modal" onclick="showDetails(this)">View Details</a></td>
+                        <td><a id="accept" href="#">Accept</a></td>
+                        <td><a id="decline" href="#">Decline</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div  class="text-more"><a href="../html/orders.html">See More</a></div>
+        </div>
+    </section>
+
+    <!--============= Javascript =====================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../javascript/script.js"></script>
+</body>
+</html>
