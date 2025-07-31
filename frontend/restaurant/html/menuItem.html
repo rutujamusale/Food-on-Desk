@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============ CSS Style ============ -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menuItem.css">
+
+    <!-- ============ Icons CSS ============ -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,100,1,200" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Manager Dashboard</title>
+</head>
+<body>
+    <!-- ========== Sidebar Start Here ========== -->
+    <section class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../images/logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">RJ</span>
+                    <span class="restr">Restaurant</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Search....">
+                </li>
+
+                <ul class="menu-link">
+                    <li class="nav-link">
+                        <a href="../html/dasboard.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link active">
+                        <a href="../html/menu.html">
+                            <i class='bx bx-food-menu icon'></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/orders.html">
+                            <i class='bx bx-bowl-hot icon'></i>
+                            <span class="text nav-text">Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/users.html">
+                            <i class='bx bx-user icon'></i>
+                            <span class="text nav-text">Users</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/analysis.html">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Analysis</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/promo.html">
+                            <i class='bx bx-code-alt icon'></i>
+                            <span class="text nav-text">Promocode</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="nav-link">
+                    <a href="#" id="logoutButton">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode" id="darkMode">
+                    <div class="moon-sun">
+                        <i class="bx bx-moon icon moon"></i>
+                        <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+
+                    <div class="toggle-switch" id="darkMode">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </section>
+    <!-- ============ Sidebar Ends Here ============ -->
+
+    <!-- ============ Navbar  ============ -->
+    <section class="navbar">
+        <div class="text-profile">
+            <div class="heading">Food Menu</div>
+
+            <div class="text profile-img">
+                <div class="user-info">
+                    <span class="name">Hii, Jayesh Savle</span>
+                    <span class="role">Admin</span>
+                </div>
+                <span class="image">
+                    <img src="../images/profile1.png" alt="profile picture">
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- ============== Navbar End ============== -->
+
+    <!-- ================ Menu Section ================= -->
+    <section class="home">
+        <div class="menuItem-container">
+            <div class="title-text">Menu Item List</div>
+            <div class="srab-container">
+                <div class="search-container">
+                    <input type="text" placeholder="Search Item..." name="search_item" id="search">
+                    <button class="btn-search button"><i class='bx bx-search'></i></button>
+                </div>
+                <div class="add-btn">
+                    <button class="button butn-add" id="btn-add-item" onclick="addNewItemForm()">Add New Item</button>
+                </div>
+            </div>
+
+            <div id="newItem">
+                <form>
+                    <div class="text-title">Add New Item</div>
+                    <div class="input-field ">
+                        <label for="name">Item Name</label>
+                        <input type="text " id="itemName" name="itemName" placeholder="Item Name" required >
+                    </div>
+                    <div class="input-field ">
+                        <label for="price">Price</label>
+                        <input type="number" id="itemPrice" name="price" placeholder="Item Price" required >
+                    </div>
+                    <div class="input-field ">
+                        <label for="name">Food Type</label>
+                        <select name="item_type" id="itemType">
+                            <option value="veg" id="veg">Vegetarian</option>
+                            <option value="nonVeg" id="non-veg">Non-Vegetarian</option>
+                        </select>
+                    </div>
+                    <div class="input-field ">
+                        <label for="name">Description</label>
+                        <input type="text" id="itemDescription" placeholder="Item Description">
+                    </div>
+                    <div class="input-field ">
+                        <span id="imageAlert">Please select an image.</span>
+                        <img src ="../images/logo.png" id="item-pic">
+                        <label class="selectImg" for="input-file">Select Image</label>
+
+                        <input type="file" accept="image/*" id="input-file" hidden/>
+                    </div>
+                    <span id="mssgAlert">Please fill up all filed.</span>
+                    <div class="buttons">
+                        <button class="submit-btn button" id="saveMenuItemBtn">Save</button>
+                        <button class="cancel-btn button" id="cancleItemForm">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <table id="itemTable" >
+                <caption  id="view-item-caption"> </caption>
+                <thead>
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>ID</th>
+                        <th>Item Name</th>
+                        <th>Image</th>
+                        <th>Food Type</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- <td>1</td>
+                        <td>Pizza</td>
+                        <td><img style="width: 80px; border-radius: 50%;" src = '../images/pizza.png'/></td>
+                        <td>&#8377; 170</td>
+                        <td><a href="#" id="edit-btn">Edit</a></td>
+                        <td><a href="#" onclick="deleteItem()" id="delete-btn">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Burgger</td>
+                        <td><img style="width: 80px; border-radius: 50%;" src = '../images/pizza.png'/></td>
+                        <td>&#8377; 140</td>
+                        <td><a href="#" id="edit-btn">Edit</a></td>
+                        <td><a href="#" onclick="deleteItem()" id="delete-btn">Delete</a></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <!--============= Javascript =====================-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../javascript/script.js"></script>
+    <script src="../javascript/menuItem.js"></script>
+</body>
+</html>

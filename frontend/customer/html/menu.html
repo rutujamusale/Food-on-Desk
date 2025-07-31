@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Css file -->
+  <link rel="stylesheet" href="../css/menu.css">
+  <title>Main Menu</title>
+</head>
+
+<body>
+    
+  <!-- main -->
+  <div class="main">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><ion-icon name="arrow-up-sharp"></ion-icon></button>
+    <!-- main navbar -->
+    <div class="main-navbar">
+      <!-- menu  when appear on mobile version-->
+      <div class="logo">
+        <img src="../images/logo.png" alt="">
+        <div class="name">
+          <span class="n-1">RJ</span>
+          <span class="restr">Restaurant</span>
+        </div>
+      </div>
+      <!-- search bar -->
+        <div class="search-bar">
+          <form action="https://www.google.com/search" method="get">
+              <input  type="sarch" name="q" id=" search-input" placeholder="Search our menu...">
+              <button type="submit" id="sarch" class="search-icon "><lord-icon  src="https://cdn.lordicon.com/unukghxb.json" trigger="hover"></lord-icon></button>
+          </form>
+      </div>
+      
+      <!-- card icon on left side of navbar -->
+      <div class="profile">
+        <a class="home" href="./index.html"><ion-icon name="storefront-outline"></ion-icon></a>
+        <a class="add" href="#"><ion-icon name="cart-outline"></ion-icon><span class="badge">3</span></a>
+        <a class="notify" href="#"><ion-icon name="notifications-outline"></ion-icon><span class="badge">3</span></a>
+        <a class="log-out" href="#"><ion-icon name="log-out-outline"></ion-icon></a>
+      </div>
+    </div>
+    <!-- main highlight -->
+    <div class="offers">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images/offer-2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/offer-2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/offer-2.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- main menu/orders -->
+    <!-- <div class="bauble_box">
+      <input class="bauble_input" id="bauble_check" name="bauble" type="checkbox">
+      <label class="bauble_label" for="bauble_check"></label>
+      <span class="toggle_text">Veg</span>
+    </div> -->
+
+    <!-- menu  items  category -->
+    <div class="main-menus">
+      <!-- filter section-->
+      <div class="main-filter">
+        <div class="horizontal-scroll">
+          <!-- <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(-100)"><i class='bx bx-chevron-left'></i></button> -->
+            
+            <div class="menu-contain" id="menu-contain">
+              <!-- Filter cards will be dynamically generated here -->
+            </div>
+
+          <!-- <button class="btn-scroll" id="btn-scroll-right" onclick="scrollHorizontally(100)"><i class='bx bx-chevron-right'></i></button> -->
+        </div>
+      </div>
+    </div>
+
+
+      <div id="container" class="container">
+        <!-- Cards will be dynamically added here -->
+      </div>
+      
+      
+        <!-- </span> -->
+        <!-- <button onclick="myFunction()" id="read">Read more</button> -->
+    </div>
+    <footer class="fix-profile">
+      <a class="home" href="./index.html"><ion-icon name="storefront-outline"></ion-icon></a>
+      <a class="ad" href="#"><ion-icon name="cart-outline"></ion-icon><span class="bdg">3</span></a>
+      <a class="notification" href="#"><ion-icon name="notifications-outline"></ion-icon><span class="bdg">3</span></a>
+      <a class="log-out" href="#"><ion-icon name="log-out-outline"></ion-icon></a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script src="/customer/JavaScript/menu1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+  
+<!-- <script>
+  // Sample JSON data (replace with data from your database)
+  var menuData = [
+    { category: "all", imageUrl: "../images/all-menu.jpg", label: "All" },
+    { category: "pizza", imageUrl: "../images/burger.jpg", label: "Pizza" },
+    { category: "burger", imageUrl: "../images/burger.jpg", label: "Burger" },
+    { category: "pizza", imageUrl: "../images/burger.jpg", label: "Pizza" },
+    { category: "burger", imageUrl: "../images/burger.jpg", label: "Burger" },
+    { category: "pizza", imageUrl: "../images/burger.jpg", label: "Pizza" },
+    { category: "burger", imageUrl: "../images/burger.jpg", label: "Burger" },
+    { category: "pizza", imageUrl: "../images/burger.jpg", label: "Pizza" },
+    { category: "burger", imageUrl: "../images/burger.jpg", label: "Burger" },
+    { category: "pizza", imageUrl: "../images/burger.jpg", label: "Pizza" },
+    { category: "burger", imageUrl: "../images/burger.jpg", label: "Burger" },
+    { category: "pizza", imageUrl: "../images/burger.jpg", label: "Pizza" },
+    { category: "burger", imageUrl: "../images/burger.jpg", label: "Burger" },
+    { category: "pizza", imageUrl: "../images/burger.jpg", label: "Pizza" },
+    { category: "burger", imageUrl: "../images/burger.jpg", label: "Burger" },
+    { category: "pizza", imageUrl: "../images/burger.jpg", label: "Pizza" },
+    { category: "burger", imageUrl: "../images/burger.jpg", label: "Burger" },
+
+    // Add more menu items as needed
+  ];
+
+  // Function to dynamically generate filter cards
+  function generateFilterCards() {
+    var menuContain = document.getElementById("menu-contain");
+
+    menuData.forEach(function(item) {
+      var filterCard = document.createElement("div");
+      filterCard.classList.add("filter-card");
+      filterCard.setAttribute("onclick", "filterSelection('" + item.category + "')");
+
+      var filterIcon = document.createElement("div");
+      filterIcon.classList.add("filter-icon");
+
+      var img = document.createElement("img");
+      img.src = item.imageUrl;
+      img.alt = item.label;
+
+      filterIcon.appendChild(img);
+      filterCard.appendChild(filterIcon);
+
+      var p = document.createElement("h5");
+      p.textContent = item.category;
+      filterCard.appendChild(p);
+
+      menuContain.appendChild(filterCard);
+    });
+  }
+
+  // Call the function to generate filter cards
+  generateFilterCards(); 
+
+
+  // Function to scroll horizontally with custom amount
+  // function scrollHorizontally(amount) {
+  //   var menuContain = document.getElementById("menu-contain");
+  //   menuContain.scrollLeft += amount;
+  //   console.log("Scrolling horizontally by", amount, "pixels");
+  // }
+</script>
+-->
+
+<!--
+<script>
+  // Array of JSON objects representing products
+  var products = [
+    {
+      "productName": "Cheese Pizza",
+      "imageSrc": "../images/McCheese Burger Veg.jpg",
+      "description": "hstarstgfbagggbuhbdf",
+      "price": "$12.99"
+    },
+    {
+      "productName": "Cheese Pizza",
+      "imageSrc": "../images/McCheese Burger Veg.jpg",
+      "description": "hstarstgfbhagdf",
+      "price": "$12.99"
+    },
+    
+    {
+      "productName": "Cheese Pizza",
+      "imageSrc": "../images/McCheese Burger Veg.jpg",
+      "description": "hstarstgfbhfdhagdf",
+      "price": "$12.99"
+    },
+    {
+      "productName": "Cheese Pizza",
+      "imageSrc": "../images/McCheese Burger Veg.jpg",
+      "description": "hstarstgfbhfdhagdf",
+      "price": "$12.99"
+    },
+
+    {
+      "productName": "Cheese Pizza",
+      "imageSrc": "../images/hot-coffee.jpg",
+      "description": "hstarstgfbhfdhagdf",
+      "price": "$12.99"
+    },
+    {
+      "productName": "Cheese Pizza",
+      "imageSrc": "../images/hot-coffee.jpg",
+      "description": "hstarstgfbhfdhagdf",
+      "price": "$12.99"
+    },
+    {
+      "productName": "Cheese Pizza",
+      "imageSrc": "../images/hot-coffee.jpg",
+      "description": "hstarstgfbhfdhagdf",
+      "price": "$12.99"
+    },
+    {
+      "productName": "Cheese Pizza",
+      "imageSrc": "../images/hot-coffee.jpg",
+      "description": "hstarstgfbhfdhagdf",
+      "price": "$12.99"
+    },
+
+    // Add more JSON objects here
+  ];
+  
+  // Function to create card elements from JSON objects
+  function createCard(product) {
+    var mainDetailDiv = document.createElement("div");
+    mainDetailDiv.classList.add("main-detail");
+  
+    var cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
+  
+    var imgContainerDiv = document.createElement("div");
+    imgContainerDiv.classList.add("card-img-container");
+  
+    var img = document.createElement("img");
+    img.src = product.imageSrc;
+    img.alt = product.productName;
+  
+    var cardBodyDiv = document.createElement("div");
+    cardBodyDiv.classList.add("card-body");
+  
+    var cardTitle = document.createElement("h5");
+    cardTitle.classList.add("card-title");
+    cardTitle.textContent = product.productName;
+
+  var cardDescription = document.createElement("p");
+  cardDescription.classList.add("card-text", "description");
+  cardDescription.textContent = product.description;
+
+  
+    var cardText = document.createElement("p");
+    cardText.classList.add("card-text");
+    cardText.textContent = product.price;
+  
+    var addButton = document.createElement("a");
+    addButton.href = "#";
+    addButton.classList.add("btn", "btn-primary");
+    addButton.textContent = "Add";
+  
+    imgContainerDiv.appendChild(img);
+    cardBodyDiv.appendChild(cardTitle);
+    cardBodyDiv.appendChild(cardDescription);
+    cardBodyDiv.appendChild(cardText);
+    cardBodyDiv.appendChild(addButton);
+  
+    cardDiv.appendChild(imgContainerDiv);
+    cardDiv.appendChild(cardBodyDiv);
+  
+    mainDetailDiv.appendChild(cardDiv);
+  
+    return mainDetailDiv;
+  }
+  
+  // Attach card elements to the container
+  var container = document.getElementById("container");
+  products.forEach(function(product) {
+    container.appendChild(createCard(product));
+  });
+  </script> -->
+</body>
+
+</html>

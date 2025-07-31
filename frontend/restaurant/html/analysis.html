@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============ CSS Style ============ -->
+    <link rel="stylesheet" href="/frontend/restaurant/css/style.css">
+    <link rel="stylesheet" href="/frontend/restaurant/css/analysis.css">
+
+    <!-- ============ Icons CSS ============ -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Manager Dashboard</title>
+</head>
+<body>
+    <!-- ========== Sidebar Start Here ========== -->
+    <section class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/frontend/restaurant/images/logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">RJ</span>
+                    <span class="restr">Restaurant</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Search....">
+                </li>
+
+                <ul class="menu-link">
+                    <li class="nav-link">
+                        <a href="../html/dasboard.html">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link" class="active">
+                        <a href="../html/menu.html">
+                            <i class='bx bx-food-menu icon'></i>
+                            <span class="text nav-text">Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/orders.html">
+                            <i class='bx bx-bowl-hot icon'></i>
+                            <span class="text nav-text">Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/users.html">
+                            <i class='bx bx-user icon'></i>
+                            <span class="text nav-text">Users</span>
+                        </a>
+                    </li>
+                    <li class="nav-link active">
+                        <a href="../html/analysis.html">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Analysis</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/promo.html">
+                            <i class='bx bx-code-alt icon'></i>
+                            <span class="text nav-text">Promocode</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="nav-link">
+                    <a href="#" id="logoutButton">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode" id="darkMode">
+                    <div class="moon-sun">
+                        <i class="bx bx-moon icon moon"></i>
+                        <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+
+                    <div class="toggle-switch" id="darkMode">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </section>
+    <!-- ============ Sidebar Ends Here ============ -->
+
+    <!-- ============ Navbar  ============ -->
+    <section class="navbar">
+        <div class="text-profile">
+            <div class="heading">Analysis</div>
+
+            <div class="text profile-img">
+                <div class="user-info">
+                    <span class="name">Hii, Jayesh Savle</span>
+                    <span class="role">Admin</span>
+                </div>
+
+                <span class="image">
+                    <img src="/frontend/restaurant/images/profile1.png" alt="profile picture">
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- ============== Navbar End ============== -->
+
+    <!-- ========= Home Section ============= -->
+    <section class="home analysis">
+        <div class="container">
+            <div class="text">
+                <h2>Welcome to your Revenue!</h2>
+            </div>
+        </div>
+        <hr>
+        
+        <!-- Bar Chart -->
+        <div class="chart-container">
+            <div class="checkByDate">
+                <form action="" method="GET">
+                    <label for="startDate">From:
+                        <input type="date" name="startDate" id="startDate">
+                    </label>
+                
+                    <label for="endDate">To:
+                        <input type="date" name="endDate" id="endDate">
+                    </label>
+                    <button class="btnn" type="submit" onclick="filterByDate()">Filter By Date</button>
+                </form>
+                
+            </div>
+
+            <div class="chart-1">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="chart-2">
+                <canvas id="order"></canvas>
+            </div>
+        </div>
+    </section>
+    
+    <!--============= Javascript =====================-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../javascript/analysis_barChar.js"></script>
+    <script src="/frontend/restaurant/javascript/script.js"></script>
+</body>
+</html>
